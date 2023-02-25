@@ -1,0 +1,28 @@
+[
+    {
+      "nombre": "Harry Potter",
+      "genero": "Fantasia",
+      "cantPaginas": 200,
+      
+      "autor": "J.K.ts Rowling"
+    },
+    {
+      "nombre": "Martin Fierro",
+      "genero": "Tradicionalista",
+      "cantPaginas": 200,
+      "autor": "Jose Hernandez"
+    },
+    {
+      "nombre": "Muerte a Credito",
+      "genero": "Ficcion",
+      "cantPaginas": 400,
+      "autor":"Louis Ferdinand Celine"
+      
+    },
+    {
+      "nombre": "Los Ejercitos de la Noche",
+      "genero": "No Ficcion",
+      "cantPaginas": 350,
+      "autor": "Norman Mailer"
+    }
+  ]
