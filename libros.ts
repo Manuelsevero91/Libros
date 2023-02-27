@@ -72,9 +72,19 @@ export class Libro{
              console.log('Libro ', nombre, 'no ha sido eliminado');
             }
         }
+
+        leerLibros() {
+            const fs = require ('fs')
+
+            const data = fs.readFileSync('./libros.json', "utf8");
+            const libros = JSON.parse(data)
+
+            console.log(libros);
+        }
+
+        
+    
     }
-    
-    
     /*
     Crear libros
     Crear una biblioteca de libros
@@ -89,12 +99,14 @@ export class Libro{
     var martinFierro = new Libro('Martin Fierro', 'Tradicionalista', 200, 'Jose Hernandez');
     var señorAnillos = new Libro('Señor de los anillos', 'Fantasia', 500, 'J. RR Tolkien');
     /* Poblar nuestra biblioteca con libros */
-    var biblioteca = [harryPotter, martinFierro, señorAnillos];
+    var biblioteca = ['harry potter', 'martin fierro', 'señor de los anillos']
     /* Crear nuevo gestor de libros */
     var gestor = new GestorLibros;
-    var carrie = new Libro('Carrie', 'Terror', 450, 'Stephen King');
+    // var carrie = new Libro('Carrie', 'Terror', 450, 'Stephen King');
     // gestor.insertar(carrie, biblioteca)
     // gestor.todo(biblioteca)
-    // gestor.consultar('Señor de los anillos', biblioteca)
+    // // gestor.consultar('Señor de los anillos', biblioteca)
     // gestor.modificar('Harry Potter', biblioteca, 'Harry Potter y el prisionero de askaban')
-    gestor.eliminar('Harry Potter', biblioteca);
+    // gestor.eliminar('Harry Potter', biblioteca);
+    // gestor.todo(biblioteca)
+    gestor.leerLibros()

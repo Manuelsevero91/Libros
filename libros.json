@@ -24,5 +24,12 @@
       "genero": "No Ficcion",
       "cantPaginas": 350,
       "autor": "Norman Mailer"
+    },
+    {
+      "nombre": "El Cuarteto de Alejandria",
+      "genero": "Ficcion",
+      "cantPaginas": 300,
+      "autor": "Lawrence Durrell"
     }
+    
   ]
