@@ -70,6 +70,8 @@ var GestorLibros = /** @class */ (function () {
         var data = fs.readFileSync('./libros.json', "utf8");
         var libros = JSON.parse(data);
         console.log(libros);
+        var nuevaData = libros.push({ "nombre": "Vigilar y Castigar", "genero": "Monografia", "canPaginas": 400, "autor": "Michel Foucault" });
+        console.log(libros);
     };
     return GestorLibros;
 }());
@@ -79,7 +81,7 @@ Crear libros
 Crear una biblioteca de libros
 crear gestor de libros
 ejecutar la funcion todo
-ejecutar la funcion insertar}
+ejecutar la funcion insertar
 ejecutar la funcion consultar
 ejecutar la funcion modificar
 ejecutar la funcion eliminar */
@@ -88,14 +90,14 @@ var harryPotter = new Libro('Harry Potter', 'Fantasia', 200, 'J.k. Rowling');
 var martinFierro = new Libro('Martin Fierro', 'Tradicionalista', 200, 'Jose Hernandez');
 var señorAnillos = new Libro('Señor de los anillos', 'Fantasia', 500, 'J. RR Tolkien');
 /* Poblar nuestra biblioteca con libros */
-var biblioteca = ['harry potter', 'martin fierro', 'señor de los anillos'];
 /* Crear nuevo gestor de libros */
 var gestor = new GestorLibros;
-// var carrie = new Libro('Carrie', 'Terror', 450, 'Stephen King');
-// gestor.insertar(carrie, biblioteca)
+var biblioteca = [harryPotter, martinFierro, señorAnillos];
 // gestor.todo(biblioteca)
 // // gestor.consultar('Señor de los anillos', biblioteca)
-// gestor.modificar('Harry Potter', biblioteca, 'Harry Potter y el prisionero de askaban')
-// gestor.eliminar('Harry Potter', biblioteca);
+gestor.modificar('Harry Potter', biblioteca, 'Harry Potter y el prisionero de askaban');
+// gestor.eliminar('machine', biblioteca);
 // gestor.todo(biblioteca)
-gestor.leerLibros();
+// gestor.leerLibros()
+// gestor.leerLibros()
+// gestor.insertarLibroJson(relatosDePoder, biblioteca)
